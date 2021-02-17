@@ -1,0 +1,95 @@
+.news {
+    .news__title {
+        text-align: center;
+        padding: $pd-1;
+        a {
+            @include styleText($fs-5, $color-black-0, $fw-normal);
+            padding: $pd-1;
+            text-decoration: none;
+        }
+        .active {
+            color: $color-red-1;
+        }
+        .title {
+            &:hover {
+                transform: translateY(10px);
+                font-size: $fs-6;
+                transition: all 0.5s;
+            }
+        }
+    }
+    .news__content {
+        .news__up {
+            img {
+                width: 100%;
+            }
+            a {
+                @include styleText($fs-2, $color-black-0, $fw-bold-0);
+                &:hover {
+                    text-decoration: none;
+                    @include styleText($fs-2, $color-red-1, $fw-bold-0);
+                    transition: all 0.5s;
+                }
+            }
+            p {
+                margin-top: $mg-2;
+                @include styleText($fs-1, $color-black-2, $fw-normal);
+            }
+            .news__icon {
+                @include styleText($fs-1, $color-gray-1, $fw-normal);
+                i {
+                    margin-right: $mg-1;
+                    padding: $pd-2;
+                }
+            }
+        }
+        .news__down {
+            img {
+                width: 100%;
+            }
+            a {
+                @include styleText($fs-2, $color-black-0, $fw-bold-0);
+                &:hover {
+                    text-decoration: none;
+                    @include styleText($fs-2, $color-red-1, $fw-bold-0);
+                    transition: all 0.5s;
+                }
+            }
+            p {
+                @include styleText($fs-1, $color-black-2, $fw-normal);
+            }
+            .news__icon {
+                @include styleText($fs-1, $color-gray-1, $fw-normal);
+                i {
+                    margin-right: $mg-1;
+                    padding: $pd-2;
+                }
+            }
+            .news__item {
+                img {
+                    width: 50px;
+                    margin: $mg-1;
+                }
+                a {
+                    @include styleText($fs-1, $color-gray-1, $fw-normal);
+                }
+            }
+        }
+    }
+    button {
+        @include styleButton(rgba(246, 246, 246, 0.5), #e4e4e4, $pd-0, $pd-1);
+        @include styleText($fs-1, $color-gray-0, 500);
+        text-align: center;
+        border-radius: 5px;
+        margin: auto;
+        margin-top: 5%;
+        margin-bottom: 5%;
+        margin-left: 50%;
+        &:hover{
+            background-color: $color-red-1;
+            @include styleText($fs-1, $color-white-0, 500);
+            transition: all 0.5s;
+        }
+    }
+}
+

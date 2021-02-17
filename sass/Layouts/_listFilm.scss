@@ -1,0 +1,130 @@
+.listFilm {
+    position: relative;
+    padding: $pd-4;
+    .listFilm_tabs {
+        .nav {
+            justify-content: center
+        }
+        .nav-pills {
+            .nav-link {
+                @include styleText($fs-4 + 4, $color-black-2, $fw-normal);
+                background-color: $color-white-1;
+                transition: all 0.2s;
+                &:hover {
+                    @include styleText($fs-4 + 5, $color-black-2, $fw-bold);
+                    color: $color-red-1;
+                }
+            }
+        }
+    }
+    .tab-content {
+        .films__items {
+            .films__trailer {
+                .trailer__img {
+                    position: relative;
+                    .cover {
+                        width: 100%;
+                        height: 100%;
+                        top: 0;
+                        background: rgba(0, 0, 0, 0.246);
+                        position: absolute;
+                        opacity: 0;
+                    }
+                    .btn-play {
+                        text-align: center;
+                        width: 50px;
+                        height: 50px;
+                        border-radius: 50%;
+                        font-size: $fs-4;
+                        color: white;
+                        border: 1px solid white;
+                        position: absolute;
+                        top: 40%;
+                        left: 40%;
+                        line-height: 47px;
+                        opacity: 0;
+                        a {
+                            color: white;
+                        }
+                    }
+                }
+                .trailer__text {
+                    position: relative;
+                    .films-name {
+                        @include styleText($fs-2, $color-black-0, $fw-bold);
+                    }
+                    .films-time {
+                        @include styleText($fs-1, $color-gray-1, $fw-normal);
+                    }
+                    .btn-buttonBuy {
+                        position: absolute;
+                        top: 0;
+                        width: 100%;
+                        opacity: 0;
+                    }
+                }
+                &:hover {
+                    .cover {
+                        opacity: 1;
+                        transition: all 0.5s;
+                    }
+                    .btn-buttonBuy {
+                        opacity: 1;
+                        transition: all 0.5s;
+                        cursor: pointer;
+                    }
+                    .btn-play {
+                        opacity: 1;
+                        transition: all 0.5s;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include responsive('small') {
+    .listFilm_tabs {
+        .nav {
+            flex-wrap: unset;
+            padding-left: 0;
+        }
+        .nav-pills {
+            text-align: center;
+            .nav-link {
+                @include styleText($fs-4, $color-black-2, $fw-normal);
+                background-color: $color-white-1;
+                transition: all 0.2s;
+                width: 170px;
+                &:hover {
+                    @include styleText($fs-1 -5, $color-black-2, $fw-bold);
+                    color: $color-red-1;
+                }
+            }
+            .btn-buttonBuy {
+                padding: 33px 20px;
+            }
+        }
+    }
+}
+
+@include responsive('medium') {
+    .listFilm {
+        padding: unset;
+        .btn-buttonBuy {
+            padding: 33px 20px;
+            height: 100px;
+        }
+    }
+}
+
+@include responsive('large') {
+    .listFilm {
+        padding: unset;
+        .btn-buttonBuy {
+            padding: 33px 20px;
+            height: 100px;
+        }
+    }
+}

@@ -1,0 +1,196 @@
+.movieSchedule__content {
+    margin: $mg-5 auto;
+    padding: $pd-3 0;
+    width: 65%;
+    .movieSchedule__logoCinema {
+        align-items: center;
+        .nav-link {
+            height: 80px;
+            line-height: 80px;
+            background-color: transparent;
+            img {
+                opacity: 0.5;
+                transition: all 0.5s;
+                width: 50px;
+            }
+            &:focus img {
+                opacity: 1;
+            }
+        }
+        .nav-link.active {
+            img {
+                opacity: 1;
+            }
+        }
+    }
+    .movieSchedule__information {
+        position: relative;
+        .nav-link {
+            background-color: transparent;
+            opacity: 0.5;
+            transition: all 0.5s;
+            .movieSchedule__item {
+                img {
+                    width: 50px;
+                }
+                h4 {
+                    @include styleText($fs-1, $color-black-0, $fw-normal);
+                    margin-bottom: 0;
+                }
+                p {
+                    @include styleText($fs-0 - 1, $color-gray-1, $fw-normal);
+                    line-height: 1.4;
+                    margin-bottom: 0;
+                }
+            }
+            &:focus {
+                opacity: 1;
+            }
+        }
+        .nav-link.active {
+            opacity: 1;
+        }
+        .movieSchedule__film {
+            height: 550px;
+            overflow-y: auto;
+            overflow-x: hidden;
+            /* width */
+            &::-webkit-scrollbar {
+                width: 5px;
+            }   
+
+            /* Track */
+            &::-webkit-scrollbar-track {
+                background: #f1f1f1; 
+            }
+
+            /* Handle */
+            &::-webkit-scrollbar-thumb {
+                background: #888; 
+            }
+
+            /* Handle on hover */
+            &::-webkit-scrollbar-thumb:hover {
+                background: #555; 
+            }
+            .movieSchedule__showTime {
+                .showTime__top {
+                    cursor: pointer;
+                    &.card {
+                        background-color: transparent;
+                        border: none;
+                    }
+                    img {
+                        width: 50px;
+                        height: 50px;
+                    }
+                    h4 {
+                        @include styleText($fs-1, $color-black-0, $fw-bold-0);
+                        margin-bottom: 0.1rem;
+                        padding-right: 0.6rem;
+                    }
+                    p {
+                        @include styleText($fs-0 - 1, $color-gray-1, $fw-normal);
+                        line-height: 1.4;
+                        margin-bottom: 0;
+                    }
+                }
+                .showTime__bottom {
+                    p {
+                        @include styleText($fs-2, $color-black-0, $fw-bold-0);
+                        margin-bottom: $mg-0 - 2;
+                    }
+                    button {
+                        span {
+                            @include styleText($fs-3, #108f3e, 500);
+                        }
+                        transition: all 0.5s;
+                        &:hover span {
+                            color: $color-red-1;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include responsive('extra-large') {
+    .movieSchedule__content {
+        margin: $mg-5 auto;
+        width: 80%;
+    }
+}
+
+@include responsive('large') {
+    .movieSchedule__content {
+        margin: $mg-5 auto;
+        width: 90%;
+        .movieSchedule__logoCinema {
+            .nav-link {
+                img {
+                    width: 45px;
+                }
+            }
+        }
+        .movieSchedule__information {
+            .nav-link {
+                .movieSchedule__item {
+                    img {
+                        width: 45px;
+                    }
+                }
+            }
+            .movieSchedule__film {
+                .movieSchedule__showTime {
+                    .showTime__top {
+                        img {
+                            width: 45px;
+                            height: 45px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include responsive('medium') {
+    .movieSchedule__content {
+        margin: $mg-5 auto;
+        width: 95%;
+        .movieSchedule__logoCinema {
+            .nav-link {
+                img {
+                    width: 40px;
+                }
+            }
+        }
+        .movieSchedule__information {
+            .nav-link {
+                .movieSchedule__item {
+                    img {
+                        width: 40px;
+                    }
+                }
+            }
+            .movieSchedule__film {
+                .movieSchedule__showTime {
+                    .showTime__top {
+                        img {
+                            width: 40px;
+                            height: 40px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include responsive('small') {
+    .movieSchedule__content {
+        margin: $mg-5 auto;
+        width: 92%;
+    }
+}

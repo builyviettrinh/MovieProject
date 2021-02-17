@@ -1,0 +1,120 @@
+.banner {
+    background-image: url("https://tix.vn/app/assets/img/icons/backapp.jpg");
+    background-size: cover;
+    background-position: center center;
+    .banner__content {
+        padding: $pd-4 0;
+        .content__text {
+            color: $color-white-1;
+            line-height: 33px;
+            p {
+                font-size: 16px;
+            }
+            span {
+                cursor: pointer;
+            }
+        }
+        .phone {
+            position: relative;
+            background: #1e1e1e;
+            height: 500px;
+            width: 250px;
+            border-radius: 25px;
+            margin: 0 auto;
+        }
+        .camera {
+            position: absolute;
+            background: #7A7A7A;
+            height: 8px;
+            width: 8px;
+            border-radius: 15px;
+            top: 22px;
+            left: 85px;
+        }
+        .speaker {
+            position: absolute;
+            background: #7A7A7A;
+            height: 6px;
+            width: 50px;
+            border-radius: 15px;
+            top: 22px;
+            left: 105px;
+        }
+        .sleep-button {
+            position: absolute;
+            background: #1e1e1e;
+            height: 35px;
+            width: 3px;
+            border-top-right-radius: 3px 3px;
+            border-bottom-right-radius: 3px 3px;
+            top: 105px;
+            left: 250px;
+        }
+        .silent-switch {
+            position: absolute;
+            background: #1e1e1e;
+            height: 25px;
+            width: 3px;
+            border-top-left-radius: 3px 3px;
+            border-bottom-left-radius: 3px 3px;
+            top: 60px;
+            left: -3px;
+        }
+        .volume {
+            position: absolute;
+            background: #1e1e1e;
+            width: 3px;
+            height: 35px;
+            border-top-left-radius: 3px 3px;
+            border-bottom-left-radius: 3px 3px;
+            left: -3px;
+        }
+        .up {
+            top: 105px;
+        }
+        .down {
+            top: 145px;
+        }
+        .screen {
+            position: absolute;
+            overflow: hidden;
+            background: #fff;
+            height: 390px;
+            width: 230px;
+            top: 50px;
+            left: 10px;
+            background: url("http://upload.wikimedia.org/wikipedia/commons/a/a3/IOS_8_Lockscreen.PNG") no-repeat center top;
+            background-size: cover;
+        }
+        .home-button {
+            position: absolute;
+            border: 1px solid #7A7A7A;
+            height: 35px;
+            width: 35px;
+            border-radius: 25px;
+            bottom: 12px;
+            left: 50%;
+            margin-left: -18px;
+        }
+        .phone__img {
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+}
+
+@include responsive('small') {
+    .content__text {
+        color: $color-white-1;
+        line-height: 33px;
+        text-align: center;
+        p {
+            font-size: 14px !important;
+        }
+        span {
+            cursor: pointer;
+        }
+    }
+}

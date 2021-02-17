@@ -1,0 +1,51 @@
+footer {
+    background-color: $color-black-1;
+    .footer__content {
+        padding: $pd-2;
+        .footer__left {
+            img {
+                width: 80px;
+                border-radius: $border-radius;
+            }
+            span {
+                @include styleText($fs-0 - 1, $color-white-0, $fw-normal);
+            }
+            p {
+                @include styleText($fs-0 - 1, $color-gray-1, $fw-normal);
+                line-height: 1.5rem;
+            }
+            a {
+                color: $color-red-1;
+                text-decoration: none;
+            }
+        }
+        .footer__right {
+            img {
+                width: 130px;
+            }
+        }
+    }
+}
+
+@include responsive('large') {
+    footer {
+        .footer__content{
+            .footer__left {
+                text-align: center;
+            }   
+            .footer__right {
+                text-align: right;
+            }
+        }
+    }
+}
+
+@include responsive('medium') {
+    footer {
+        .footer__content{
+            .footer__right {
+                text-align: center;
+            }
+        }
+    }
+}

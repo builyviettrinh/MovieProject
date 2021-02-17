@@ -1,0 +1,43 @@
+header{
+    @include styleText($fs-0, $color-black-0,$fw-normal);
+    .header__left{
+        display: flex;
+        align-items: center;
+        .navbar-brand{
+            img{
+                width: 50px;
+            }
+        }
+    }
+    .header__center{
+        a{
+            margin-right: $mg-1;
+            @include styleText($fs-1, $color-black-0,$fw-normal);
+            &:hover{
+                @include styleText($fs-1, $color-red-1,$fw-normal); 
+                transition: all 0.5s;
+            }
+        }    
+    }
+    .header__right{
+        @include styleText($fs-0, $color-gray-0,$fw-normal);
+        .login{
+            border-right: 1px solid $color-gray-0;
+            margin: $mg-0;
+            padding-right: $mg-0;
+        }
+        i{
+            font-size: 30px;
+        }
+    }
+}
+@include responsive('large'){
+    .header__right{
+        display: none;
+    }
+}
+@include responsive('medium'){
+    .header__center{
+        display: none;
+    }
+}

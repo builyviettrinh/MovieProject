@@ -1,0 +1,50 @@
+.owl-carousel {
+    .owl-prev {
+        position: absolute;
+        font-size: 170px!important;
+        top: 30%;
+        left: -7%;
+        color: $color-gray-0!important;
+        &:focus {
+            outline: none;
+        }
+        &:hover {
+            background: none!important;
+        }
+    }
+    .owl-next {
+        position: absolute;
+        font-size: 170px!important;
+        top: 30%;
+        right: -7%;
+        color: $color-gray-0!important;
+        &:focus {
+            outline: none;
+        }
+        &:hover {
+            background: none!important;
+        }
+    }
+}
+
+@include responsive('small') {
+    .owl-carousel {
+        .owl-prev {
+            display: none !important;
+        }
+        .owl-next {
+            display: none !important;
+        }
+    }
+}
+
+@include responsive('medium') {
+    .owl-carousel {
+        .owl-prev {
+            display: none !important;
+        }
+        .owl-next {
+            display: none !important;
+        }
+    }
+}

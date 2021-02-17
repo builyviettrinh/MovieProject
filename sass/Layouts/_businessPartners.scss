@@ -1,0 +1,98 @@
+.businessPartners {
+    background-color: #222;
+    .businessPartners__content {
+        border-bottom: solid 1px rgba(255, 255, 255, 0.644) !important;
+        a {
+            font-size: 12px!important;
+            font-weight: 700;
+            white-space: nowrap;
+            color: #949494;
+            display: block;
+            transition: all .2s;
+            line-height: 2.3;
+            text-decoration: none!important;
+            &:hover {
+                color: white;
+            }
+        }
+        p {
+            color: white;
+        }
+        .linePartner {
+            margin-bottom: 15px;
+            padding-left: 0;
+            padding-right: 0;
+            .icon {
+                border-radius: 50%;
+                height: 30px;
+                width: 30px;
+                margin-right: 15px;
+                &:hover {
+                    opacity: 0.8;
+                }
+            }
+        }
+        .iconApp {
+            background: 0 0;
+            height: 30px;
+            width: auto;
+            margin: 5px;
+        }
+    }
+}
+
+@include responsive('small') {
+    .hide {
+        display: none;
+    }
+    .fbzl {
+        justify-content: center;
+    }
+    .flexMB {
+        display: flex;
+        justify-content: space-between;
+    }
+    a {
+        margin-left: 10px;
+    }
+}
+
+@include responsive('medium') {
+    .hide {
+        display: none;
+    }
+    .fbzl {
+        margin: 25px 0;
+        justify-content: center;
+    }
+    .flexMB {
+        display: flex;
+        justify-content: space-between;
+    }
+    .flexMD {
+        margin-left: 100px;
+    }
+    a {
+        padding-left: 10px;
+    }
+}
+
+@include responsive('large') {
+    .hide {
+        display: none;
+    }
+    .fbzl {
+        margin: 25px 0;
+        justify-content: center;
+    }
+    .flexMB {
+        display: flex;
+        justify-content: space-between;
+    }
+    .flexMD {
+        margin-left: 100px;
+    }
+    a {
+        padding-left: 20px;
+    }
+}

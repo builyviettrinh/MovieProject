@@ -1,0 +1,18 @@
+.ageLimit-red {
+    @include styleAgeLimit($fs-1, $color-red-2, $fw-bold);
+    color: $color-white-1;
+    width: 32px;
+    display: inline-block;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.ageLimit-green {
+    @include styleAgeLimit($fs-1, $color-red-2, $fw-bold);
+    background-color: $color-green-0;
+    color: $color-white-0;
+    width: 32px;
+    display: inline-block;
+    border-radius: 5px;
+    text-align: center;
+}

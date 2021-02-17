@@ -1,0 +1,23 @@
+//Helper
+@import './Helper/variables';
+@import './Helper/mixin';
+//Vendor
+//Base
+@import './Base/reset';
+@import './Base/customize';
+@import './Base/normalized';
+//Components
+@import './Components/button';
+@import './Components/ageLimit';
+//Layout
+@import './Layouts/header';
+@import './Layouts/carousel';
+@import './Layouts/ticker';
+@import './Layouts/listFilm';
+@import './Layouts/movieSchedule';
+@import './Layouts/news';
+@import './Layouts/banner';
+@import './Layouts/businessPartners';
+@import './Layouts/footer';
+//Page
+// Theme
